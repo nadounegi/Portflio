@@ -8,18 +8,43 @@
   --hue-2: 47;
   /*色の参照数　--hue-1,--hue-2の参照数が参考できる*/
   --color-primary: #7a49fe;
-  --bg-color: hsl(var(--hue-1), 100%, 97%);
   --main-color-1: hsl(257, 100%, 60%);
   --main-color-dark-1: hsl(257, 69%, 50%);
   --main-color-2: hsl(47, 100%, 61%);
   --main-color-: hsl(47, 82%, 55%);
+  --color-gray-lighten: #f6f8fe;
+  --section-padding: 7rem;
+}
+body {
+  --bg-color: hsl(var(--hue-1), 100%, 97%);
   --bg-color-1: hsl(257, 100%, 97%);
   --bg-color-2: #fff;
   --bg-color-3: hsl(257, 100%, 98%);
   --bg-color-transparent: rgba(255, 255, 255, 0.6);
   --heading-color: hsl(257, 61%, 24%);
   --text-color: hsl(257, 17%, 63%);
-  --color-gray-lighten: #f6f8fe;
+}
+
+body.dark {
+  --bg-color: hsl(var(--hue-1), 19%, 15%);
+  --bg-color-1: hsl(257, 21%, 11%);
+  --bg-color-2: hsl(var(--hue-1), 23%, 19%);
+  --bg-color-3: hsl(257, 23%, 24%);
+  --bg-color-transparent: hsla(var(--hue-1), 23%, 19%, 0.6);
+  --heading-color: hsl(257, 100%, 95%);
+  --text-color: hsl(257, 14%, 51%);
+}
+
+body.dark.toggle-btn {
+  background-color: var(--bg-color-3);
+}
+
+body.dark.toggle-btn:hover {
+  background-color: brightness(110%);
+}
+
+body.dark.form-input:hover {
+  filter: brightness(110%);
 }
 /*General Styles*/
 *,
@@ -103,6 +128,70 @@ ul {
   color: var(--text-color);
   font-size: 0.9rem;
   margin: 2rem 0;
+}
+
+.cta {
+  position: relative;
+  margin-top: 3.5rem;
+  display: flex;
+  align-items: center;
+  top: 85px;
+}
+
+.cta.btn {
+  margin-right: 1.5rem;
+}
+
+.btn {
+  display: inline-block;
+  padding: 0.9rem 1.75rem;
+  margin-right: -2px;
+  border-radius: 17px;
+  background-color: var(--main-color-1);
+  color: #fff;
+  font-weight: bold;
+  font-size: 1.1rem;
+  letter-spacing: 0.4px;
+  text-transform: capitalize;
+  transition: 0.3s;
+  min-width: 125px;
+}
+
+.btn:hover {
+  background-color: ;
+}
+
+.btn.secondary-btn {
+  position: relative;
+  background-color: transparent;
+  color: var(--main-color-1);
+  font-weight: 500;
+  font-size: 1.1rem;
+  font-weight: bold;
+  left: 20px;
+  letter-spacing: 0px;
+  border-bottom: 2.5px solid var(--main-color-2);
+  border-radius: 0px;
+  padding: 0.15rem 0;
+}
+
+.btn.secondary-btn::before {
+  content: "";
+  position: absolute;
+  width: 0%;
+  height: 2.5px;
+  bottom: -2.5px;
+  left: 0;
+  background-color: var(--main-color-1);
+  transition: 0.3s ease-in-out;
+}
+
+.btn.secondary-btn:hover::before {
+  width: 100%;
+}
+.section {
+  position: relative;
+  padding: var(--section-padding) 0;
 }
 
 /*Navbar Styling*/
@@ -232,66 +321,6 @@ header.scrolled.logo {
   margin: 0.8rem 0;
 }
 
-.cta {
-  position: relative;
-  margin-top: 3.5rem;
-  display: flex;
-  align-items: center;
-  top: 85px;
-}
-
-.cta.btn {
-  margin-right: 1.5rem;
-}
-
-.btn {
-  display: inline-block;
-  padding: 0.9rem 1.75rem;
-  margin-right: -2px;
-  border-radius: 17px;
-  background-color: var(--main-color-1);
-  color: #fff;
-  font-weight: bold;
-  font-size: 1.1rem;
-  letter-spacing: 0.4px;
-  text-transform: capitalize;
-  transition: 0.3s;
-  min-width: 125px;
-}
-
-.btn:hover {
-  background-color: ;
-}
-
-.btn.secondary-btn {
-  position: relative;
-  background-color: transparent;
-  color: var(--main-color-1);
-  font-weight: 500;
-  font-size: 1.1rem;
-  font-weight: bold;
-  left: 20px;
-  letter-spacing: 0px;
-  border-bottom: 2.5px solid var(--main-color-2);
-  border-radius: 0px;
-  padding: 0.15rem 0;
-}
-
-.btn.secondary-btn::before {
-  content: "";
-  position: absolute;
-  width: 0%;
-  height: 2.5px;
-  bottom: -2.5px;
-  left: 0;
-  background-color: var(--main-color-1);
-  transition: 0.3s ease-in-out;
-}
-
-.btn.secondary-btn:hover::before {
-  width: 100%;
-}
-
 .showcase-image {
   position: relative;
   width: 100%;
@@ -347,7 +376,11 @@ header.scrolled.logo {
   border-radius: 60%;
   transform: translateX(-50%);
 }
-
+/*-------------About Section Styling-------------------------------*/
+.about.container {
+  display: grid;
+  grid-template-columns: 1.05fr 1fr;
+}
 /*-------------Contact Section Styling-----------------------------*/
 
 .contact.container {
@@ -395,11 +428,10 @@ header.scrolled.logo {
 .contact-form h3 {
   color: var(--heading-color);
   font-size: 1.3rem;
-  font-weight: 500;
+  font-weight: bolder;
   margin-bottom: 1.6rem;
   line-height: 0.9;
 }
-
 .form-input {
   display: inline-block;
   margin-top: 1.5rem;
@@ -409,6 +441,35 @@ header.scrolled.logo {
   width: 100%;
   height: 100%;
   border-radius: 17px;
+  font-family: inherit;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--heading-color);
+  outline: none;
+}
+
+.form-input:hover {
+  filter: brightness(97%);
+}
+
+.form-input:focus {
+  filter: brightness(100%);
+  background: var(--bg-color-1);
+  border-color: var(--main-color-1);
+}
+.form-input:valid,
+.form-input:focus {
+  filter: brightness(100%);
+  background: var(--bg-color-1);
+  border-color: var(--main-color-1);
+}
+.form-input::placeholder {
+  color: var(--text-color);
+}
+
+textarea .form-input {
+  resize: none;
+  min-height: 170px;
 }
 
 .contaft-info {
