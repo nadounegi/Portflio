@@ -385,9 +385,13 @@ header.scrolled.logo {
   padding: 3.5rem 3rem;
   display: flex;
   flex-direction: column;
-  margin-left: 30px;
+  margin-left: 100px;
+  width: 100%;
 }
 
+.contact-form .btn {
+  margin: 24px 0 0;
+}
 .contact-form h3 {
   color: var(--heading-color);
   font-size: 1.3rem;
@@ -398,15 +402,17 @@ header.scrolled.logo {
 
 .form-input {
   display: inline-block;
+  margin-top: 1.5rem;
   padding: 0.9rem 1.5rem;
   background-color: var(--bg-color-3);
   border: 2px solid var(--bg-color-3);
   width: 100%;
+  height: 100%;
   border-radius: 17px;
 }
 
 .contaft-info {
-  width: 450px;
+  width: 100%;
 }
 .contact-section.container {
   position: relative;
