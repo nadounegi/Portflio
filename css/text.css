@@ -189,10 +189,6 @@ ul {
 .btn.secondary-btn:hover::before {
   width: 100%;
 }
-.section {
-  position: relative;
-  padding: var(--section-padding) 0;
-}
 
 /*Navbar Styling*/
 
@@ -377,10 +373,7 @@ header.scrolled.logo {
   transform: translateX(-50%);
 }
 /*-------------About Section Styling-------------------------------*/
-.about.container {
-  display: grid;
-  grid-template-columns: 1.05fr 1fr;
-}
+
 /*-------------Contact Section Styling-----------------------------*/
 
 .contact.container {
@@ -482,7 +475,7 @@ textarea .form-input {
 .contact-form.form-input {
   margin-bottom: 1.5rem;
 }
-/* -------1000px Screens-----------
+/* -------1000px Screens-----------*/
 
 @media (max-width: 1000px) {
   .sub-heading {
@@ -551,4 +544,4 @@ textarea .form-input {
     font-size: 1.1rem;
     margin-bottom: 1rem;
   }
-} */ ;
+}
