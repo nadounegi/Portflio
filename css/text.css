@@ -317,15 +317,23 @@ header.scrolled.logo {
   margin: 0.8rem 0;
 }
 
-.showcase-image {
+/* .showcase-image {
   position: relative;
   width: 100%;
   min-height: calc(100% + 120px);
-  margin-top: 145px;
+  margin-top: 221px;
   left: 80%;
   align-self: flex-end;
-  margin-left: -455px;
+  margin-left: -555px;
+} */
+img.person {
+  margin-top: 180px;
+  margin-left: 300px;
 }
+
+/* .person {
+  margin-top: 400px;
+} */
 
 .social {
   position: relative;
@@ -387,6 +395,8 @@ header.scrolled.logo {
   font-weight: 500;
   font: size 1.1rem;
   transition: 0.3s;
+  top: 35px;
+  position: relative;
 }
 
 .mail i {
