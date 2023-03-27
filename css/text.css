@@ -353,6 +353,7 @@ img.person {
   position: relative;
   display: flex;
   flex-wrap: wrap;
+  width: 284px;
   align-items: center;
   top: 150px;
   gap: 2rem;
@@ -367,6 +368,9 @@ img.person {
   justify-content: center;
   align-items: center;
   column-gap: 2rem;
+  left: 89px;
+  top: -79px;
+  position: relative;
 }
 
 .social-link {
@@ -387,6 +391,19 @@ img.person {
 }
 
 /*-------------About Section Styling-------------------------------*/
+.about {
+  display: flex;
+  top: -253px;
+  position: relative;
+}
+p.text {
+  position: absolute;
+  top: 25px;
+  width: 500px;
+}
+.container.heading {
+  width: 250px;
+}
 
 /*-------------Contact Section Styling-----------------------------*/
 
