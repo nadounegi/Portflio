@@ -405,6 +405,45 @@ p.text {
   width: 250px;
 }
 
+.about-box {
+  top: 144px;
+  left: -872px;
+  position: relative;
+}
+
+.about.list1 {
+}
+.about-list2 {
+  position: relative;
+  bottom: 66px;
+  left: 290px;
+}
+
+.about-list1 p {
+  font-family: "Nunito", sans-serif;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.about-list2 p {
+  font-family: "Nunito", sans-serif;
+  color: var(--color-primary);
+  font-weight: bold;
+}
+
+.about-list1 span {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+  left: 10px;
+  position: relative;
+}
+
+.about-list2 span {
+  font-family: "Nunito", sans-serif;
+  color: var(--text-color);
+  left: 10px;
+  position: relative;
+}
 /*-------------Contact Section Styling-----------------------------*/
 
 .contact.container {
